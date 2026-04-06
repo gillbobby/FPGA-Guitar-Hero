@@ -1,0 +1,34 @@
+11:55:25 **** Build of configuration Debug for project audio_core_cpu1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/audio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
+'Finished building: ../src/audio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_ps7_cortexa9_1/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:308:5: warning: implicit declaration of function 'Xil_DCacheDisable' [-Wimplicit-function-declaration]
+  308 |     Xil_DCacheDisable();
+      |     ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: audio_core_cpu1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/standalone_ps7_cortexa9_1/bsplib/lib -o "audio_core_cpu1.elf"  ./src/audio.o ./src/main.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: audio_core_cpu1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size audio_core_cpu1.elf  |tee "audio_core_cpu1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  44976	   4688	  22760	  72424	  11ae8	audio_core_cpu1.elf
+'Finished building: audio_core_cpu1.elf.size'
+' '
+
+11:55:27 Build Finished (took 1s.332ms)
+

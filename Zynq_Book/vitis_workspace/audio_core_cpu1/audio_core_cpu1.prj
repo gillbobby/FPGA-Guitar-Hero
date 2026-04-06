@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="audio_core_cpu1" location="C:/Zynq_Book/vitis_workspace/audio_core_cpu1" platform="C:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm" platformUID="xilinx:zed::0.0(custom)" systemProject="audio_core_cpu1_system" sysConfig="zedboard_platform" runtime="cpp" cpu="standalone_ps7_cortexa9_1" cpuInstance="ps7_cortexa9_1" os="standalone" mssSignature="31f9f0e2ff3fe579d135d2f97d494333">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1470920932">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1345988454" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="empty_application"/>
+</sdkproject:SdkProject>

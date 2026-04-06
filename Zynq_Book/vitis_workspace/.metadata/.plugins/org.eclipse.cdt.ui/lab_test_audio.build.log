@@ -1,0 +1,37 @@
+14:18:37 **** Build of configuration Debug for project lab_test_audio ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/audio.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Zynq_Book/vitis_workspace/lab_test_audio_platform/export/lab_test_audio_platform/sw/lab_test_audio_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/audio.d" -MT"src/audio.o" -o "src/audio.o" "../src/audio.c"
+'Finished building: ../src/audio.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/Zynq_Book/vitis_workspace/lab_test_audio_platform/export/lab_test_audio_platform/sw/lab_test_audio_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'gpio_interrupt_handler':
+../src/main.c:235:17: warning: unused variable 'interrupts_during_record' [-Wunused-variable]
+  235 |             u32 interrupts_during_record = debug_interrupt_count - record_start_interrupt_count;
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:216:9: warning: unused variable 'btn_state' [-Wunused-variable]
+  216 |     u32 btn_state = XGpio_DiscreteRead(gpio_ptr, 1);
+      |         ^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: lab_test_audio.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/Zynq_Book/vitis_workspace/lab_test_audio_platform/export/lab_test_audio_platform/sw/lab_test_audio_platform/standalone_domain/bsplib/lib -o "lab_test_audio.elf"  ./src/audio.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab_test_audio.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab_test_audio.elf  |tee "lab_test_audio.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40264	   1976	3862760	3905000	 3b95e8	lab_test_audio.elf
+'Finished building: lab_test_audio.elf.size'
+' '
+
+14:18:38 Build Finished (took 1s.781ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="C:\Zynq_Book\vitis_workspace\zedboard_platform_1\export\zedboard_platform_1;C:\Zynq_Book\vitis_workspace\zedboard_platform\export\zedboard_platform;C:\Zynq_Book\vitis_workspace\lab_test_audio_platform\export\lab_test_audio_platform"/>
+</section>

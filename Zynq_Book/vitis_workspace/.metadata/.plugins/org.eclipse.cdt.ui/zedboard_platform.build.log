@@ -1,0 +1,22 @@
+19:19:27 **** Build of project zedboard_platform ****
+buildplatform.bat 64135 zedboard_platform  
+XSDB Server Channel: tcfchan#12
+Reading the platform  : "zedboard_platform"
+Reading the platform  : "zedboard_platform"
+No Platform exists with name:  zedboard_platform
+    invoked from within
+"::tcf::eval -progress {apply {{msg} {puts $msg}}} {tcf_send_command tcfchan#0 xsdb eval s es {{platform active zedboard_platform; platform generate }}}"
+    (procedure "::tcf::send_command" line 4)
+    invoked from within
+"tcf send_command $::xsdb::curchan xsdb eval s es [list "platform active $PLATFORM_NAME; platform generate $target"]"
+    invoked from within
+"if { $iswindows == 1 } {    
+
+    set XSDB_PORT [lindex $argv 0]
+    set PLATFORM_NAME [lindex $argv 1]
+    set arglen [llength $argv]
+    set lastind..."
+    (file "C:/Xilinx/Vitis/2020.2\scripts\vitis\util\buildplatform.tcl" line 11)
+
+19:19:30 Build Finished (took 3s.17ms)
+

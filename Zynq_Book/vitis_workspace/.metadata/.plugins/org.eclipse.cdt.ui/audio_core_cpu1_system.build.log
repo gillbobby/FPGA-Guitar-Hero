@@ -1,0 +1,12 @@
+11:46:08 **** Build of configuration Debug for project audio_core_cpu1_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 61164 C:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm standalone_ps7_cortexa9_1 C:/Zynq_Book/vitis_workspace/audio_core_cpu1_system/Debug/system.bif
+sdcard_gen --xpfm C:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/zedboard_platform.xpfm --sys_config zedboard_platform --bif C:/Zynq_Book/vitis_workspace/audio_core_cpu1_system/Debug/system.bif --bitstream C:/Zynq_Book/vitis_workspace/audio_core_cpu1/_ide/bitstream/milestone_1_wrapper.bit --elf C:/Zynq_Book/vitis_workspace/audio_core_cpu1/Debug/audio_core_cpu1.elf,ps7_cortexa9_1
+creating BOOT.BIN using C:/Zynq_Book/vitis_workspace/audio_core_cpu1/_ide/bitstream/milestone_1_wrapper.bit
+Error: platform file not found: C:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/boot/fsbl.elf
+Running C:/Xilinx/Vitis/2020.2/bin/bootgen  -image C:/Zynq_Book/vitis_workspace/audio_core_cpu1_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+[ERROR]  : Cannot read file - C:/Zynq_Book/vitis_workspace/zedboard_platform/export/zedboard_platform/sw/zedboard_platform/boot/fsbl.elf
+
+11:46:15 Build Finished (took 6s.962ms)
+
