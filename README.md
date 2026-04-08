@@ -3,9 +3,9 @@
 A Guitar Hero–style rhythm game built on a Xilinx ZedBoard (Zynq-7000) for my ENSC 452 final project at SFU. You press buttons in time with the music and get points the better your timing is.
 
 **Songs:**
-- Harder Better Faster Stronger — Daft Punk
-- Levels — Avicii
-- Beat It — Michael Jackson
+- Harder Better Faster Stronger by Daft Punk
+- Levels by Avicii
+- Beat It by Michael Jackson
 
 ---
 
@@ -51,11 +51,11 @@ This is the custom VHDL IP core I designed for the course. It sits in the PL at 
 The reason volume scaling has to happen in hardware instead of software: the audio loop runs at 48 kHz (one sample every ~4166 clock cycles at 200 MHz), and I pace it with the PMCCNTR cycle counter. For the timing to be stable, the loop needs to do exactly 5 AXI transactions every iteration, with no branching. If I added a multiply/divide in software I'd need extra conditional reads or writes and the transaction count would vary, which causes the audio to play at the wrong speed. Putting it in the IP keeps the 5-transaction count constant.
 
 The 5 transactions are:
-1. Write backing sample → Reg0
-2. Write vocal sample → Reg1
-3. Read output ← Reg3
-4. Write left channel → I2S TX
-5. Write right channel → I2S TX
+1. Write backing sample -> Reg0
+2. Write vocal sample -> Reg1
+3. Read output <- Reg3
+4. Write left channel -> I2S TX
+5. Write right channel -> I2S TX
 
 ---
 
@@ -79,7 +79,7 @@ I edited each of the songs and annotated beatmaps manually in Audacity.
 ## Scoring
 
 - 100 points per hit
-- Combo multiplier: 1× → 2× at 10 hits → 3× at 20 → 4× at 30
+- Combo multiplier: 1× -> 2× at 10 hits -> 3× at 20 -> 4× at 30
 - Miss resets combo and multiplier
 - High scores saved per song in DDR, updated at end of song
 
