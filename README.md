@@ -77,19 +77,10 @@ The script programs the FPGA, loads the audio files into DDR, loads both ELF fil
 
 Project files
 
-vivado/                        - Vivado hardware project + bitstream
-vitis_workspace/
-  audio_core_cpu1/src/
-    main.c                     - CPU1: audio, scoring, segment muting
-    beatmap.h                  - Note timestamps for all 3 songs
-    shared_memory.h            - Shared DDR memory map
-  vga_core_cpu0/src/
-    main.cc                    - CPU0: VGA, menus, PRNG lane assignment
-  final.tcl                    - Boot script
-ip/
-  audio_mixer_v1_0.vhd         - Custom AXI4-Lite IP top level
-  audio_mixer_v1_0_S00_AXI.vhd - AXI slave + mixing/volume logic
-data/audio/
-  song1/FULL_daftpunk.raw
-  song2/full_levels.raw
-  song3/song3.raw
+vivado/ contains the Vivado hardware project and the bitstream that gets loaded onto the FPGA.
+
+vitis_workspace/ contains the two CPU applications. audio_core_cpu1/src/main.c is the audio and game logic running on CPU1. vga_core_cpu0/src/main.cc is the VGA display and menu logic running on CPU0. Both applications share beatmap.h (note timestamps for all 3 songs) and shared_memory.h (the DDR memory map used for inter-core communication). final.tcl is the XSCT boot script that programs the board and starts both cores.
+
+ip/ contains the custom VHDL IP core: audio_mixer_v1_0.vhd is the top level and audio_mixer_v1_0_S00_AXI.vhd is the AXI slave with the volume scaling logic.
+
+data/audio/ contains the raw audio files for each song (48 kHz signed 16-bit PCM mono): song1/FULL_daftpunk.raw, song2/full_levels.raw, and song3/song3.raw.
